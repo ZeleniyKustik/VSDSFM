@@ -17,7 +17,7 @@ graph TD
     port --> |ansver| user
 
    
-    mem -->|read|main
+    main <--> mem
     main <--> memcore
     main <--> port
 
