@@ -34,28 +34,20 @@ main <--> memcore
 ```mermaid
 graph TD
   
-
 port[Port]
-
 
 memcore[Core memory]
 
 mem@{ shape: "cyl", label: "Memory" }
-main(main)
+main(Main)
 
 
-
-	main-->|query| memcore
-
-
-
+main-->|query| memcore
 
 memcore <--> c0
 memcore <--> c1
 memcore <--> c2
 memcore <--> cn
-
-
 
 c0(Core 0)
 c1(Core 1)
@@ -68,8 +60,7 @@ c2 <--> mem
 cn <--> mem
 
 
-t@{ shape: "hex", label: "Transwer data" }
-
+t@{ shape: "hex", label: "data transfer" }
 
 t <--> c0
 t <--> c1
