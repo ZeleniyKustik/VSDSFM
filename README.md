@@ -16,9 +16,9 @@ core(Cores)
 memcore[Core memory]
 
 user --> |query| port
-port --> |ansver| user
+port --> |answer| user
 
-main --> |ansver| port
+main --> |answer| port
 port --> |query| main
 
 main <--> mem    
@@ -29,3 +29,56 @@ core <-->  memcore
       
 main <--> memcore 
 ```
+
+
+```mermaid
+graph TD
+  
+
+port[Port]
+
+
+memcore[Core memory]
+
+mem@{ shape: "cyl", label: "Memory" }
+main(main)
+
+
+
+	main-->|query| memcore
+
+
+
+
+memcore <--> c0
+memcore <--> c1
+memcore <--> c2
+memcore <--> cn
+
+
+
+c0(Core 0)
+c1(Core 1)
+c2(Core 2)
+cn(Core n)
+
+c0 <--> mem
+c1 <--> mem
+c2 <--> mem
+cn <--> mem
+
+
+t@{ shape: "hex", label: "Transwer data" }
+
+
+t <--> c0
+t <--> c1
+t <--> c2
+t <--> cn
+t <--> port
+
+
+```
+
+
+
