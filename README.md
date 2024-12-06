@@ -3,30 +3,37 @@ Very Simple Data Storage For Mindustry
 
 ```mermaid
 graph TD
-    user(User) 
-    main(Main)
-    core(Cores)
+  
 
-    port[Port]
-    mem[Memory]
-    memcore[Core memory]
+user(User)
+port[Port]
+
+main(Main)
+
+mem@{ shape: "cyl", label: "Memory" }
+
+core(Cores)
+memcore[Core memory]
 
 
 
     user --> |query| port
     port --> |ansver| user
 
-   
-    main <--> mem
-    main <--> memcore
-    main <--> port
+    main --> |ansver| port
+    port --> |query| main
 
-
-    core <-->  memcore
-core <--> |data| port
-    core -->|write| mem
-    mem -->|read| core
+ main <--> mem
     
+
+core <--> |data transfer| port
+core <-->|work with data| mem
+ core <-->  memcore
+       
+
+   main <--> memcore
+ 
+
   
 
 
