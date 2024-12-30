@@ -71,7 +71,7 @@ t <--> port
 
 ```
 
-![ALL MEM(4)](https://github.com/user-attachments/assets/f886bcf2-f581-4b8d-a010-17a7c6e666dd)
+![ALL MEM(5)](https://github.com/user-attachments/assets/5a8a88fd-0484-4747-9ad1-aa1cb0f7f76d)
 
 
 
